@@ -30,8 +30,19 @@ syntax match potionOperator "\v\*\="
 syntax match potionOperator "\v/\="
 syntax match potionOperator "\v\+\="
 syntax match potionOperator "\v-\="
+syntax match potionOperator "\v:"
+syntax match potionOperator "\v\."
+syntax match potionOperator "\v/"
 
 highlight link potionOperator Operator
+"}}}
+
+"Potion Number{{{
+  syntax match potionNumber "\v(\d+)" "Integer
+  syntax match potionNumber "\v\d*\.\d+"  "Float
+  syntax match potionNumber "\ve[\+\-]\d+"  "Exponent
+  syntax match potionNumber "\v0x[[:xdigit:]]+" "HexaDecimal 
+  highlight link potionNumber Number
 "}}}
 
 
